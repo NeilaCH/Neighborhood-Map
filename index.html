@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TUNISIA Touristic Map</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://knockoutjs.com/downloads/knockout-3.4.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9747;</a>
+       <h4> Search Cafe Locations</h4>
+       <input class="search" id="search-within-text" type="text" data-bind="textInput: filteredInput" placeholder="Ex: Cafe Des Delice">
+       <hr>
+         <ul class="list-places" data-bind="foreach: filterLocations">
+          <p class="places" data-bind="text: title, click: $parent.showLocation,  visible: show"></p>
+        </ul>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Best Cafe in Sid'Bou Said</button>
+  </div>  
+   
+  <div id="map"></div>
+
+    <script src="js/map.js" type="text/javascript"></script> 
+   <script src="js/navfunc.js" type="text/javascript"></script> 
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyDRUXalLdAABs0CkkmUPwMumrKwxFI8kR0&v=3&callback=initMap" onerror="mapError()">
+    </script>
+
+  </body>
+</html>
