@@ -4,12 +4,11 @@ The project consists of developing a single page application featuring a map of 
 # Project Structure
 The Neighborhood Map is based on the following structure:
 
-├── index.html
-├── css
-│└── style.css
-├── js
-   │└── map.js
-   │└── navfunc.js
+- index.html
+- css / style.css
+- js / map.js
+- js / navfunc.js
+
    
 * `index.html` structure the layout of the web page application.
 * `css/style.css` contains the styling of the web page application.
